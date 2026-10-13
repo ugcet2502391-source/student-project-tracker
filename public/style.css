@@ -1,1 +1,147 @@
 
+/* Basic page layout */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #1e293b;
+  background: #f1f5f9;
+}
+
+main {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Page heading */
+header {
+  margin-bottom: 28px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  line-height: 1.25;
+}
+
+header p {
+  margin: 0;
+  color: #475569;
+}
+
+/* Sections */
+section {
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 1.35rem;
+}
+
+/* Form and labels */
+#project-form {
+  display: grid;
+  gap: 18px;
+}
+
+#project-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+#project-form input,
+#project-form select {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  font: inherit;
+  color: #1e293b;
+  background: #ffffff;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+}
+
+/* Noticeable Add button */
+#project-form button {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  background: #4338ca;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#project-form button:hover {
+  background: #3730a3;
+}
+
+/* Keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+/* Status and empty state */
+#message {
+  margin: 14px 0 0;
+  color: #166534;
+}
+
+#empty-state {
+  margin: 0;
+  padding: 18px;
+  color: #475569;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+}
+
+#project-list {
+  display: grid;
+  gap: 12px;
+  padding-left: 24px;
+}
+
+#project-list li {
+  overflow-wrap: anywhere;
+}
+
+/* Smaller screens */
+@media (max-width: 559px) {
+  body {
+    padding: 14px 10px;
+  }
+
+  header,
+  section {
+    padding: 18px;
+  }
+
+  #project-form {
+    gap: 14px;
+  }
+}
